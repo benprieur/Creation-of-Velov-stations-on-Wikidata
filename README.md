@@ -1,1 +1,4 @@
-# VELOV-WIKIDATA
+Le code utilise le csv issu de cette ressource :
+* https://public.opendatasoft.com/explore/dataset/station-velov-grand-lyon/table/?flg=fr
+Il permet de créer l'ensemble des stations Vélo'v sur Wikidata :
+* Requête graphique du résultat : https://query.wikidata.org/embed.html#%23defaultView%3AMap%0ASELECT%20DISTINCT%20%3FitemLabel%20%3Fitem%20%3Fimage%20%3Fcoord%20%3FpartieLabel%20%3FlocLabel%20%3Flayer%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP31%20wd%3AQ61663696.%0A%20%20%3Fitem%20wdt%3AP361%20%3Fpartie.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP18%20%3Fimage.%20%7D%0A%20%20BIND(IF(%3Fimage%20%3D%20%22%22%2C%20%22yes%22%2C%20%22no%22)%20AS%20%3Flayer)%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP361%20%3Fpartie.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP625%20%3Fcoord.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP131%20%3Floc.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22fr%22.%20%7D%0A%20%20%3Fitem%20wdt%3AP361%20wd%3AQ4096.%0A%7D%0AORDER%20BY%20DESC(%3FitemLabel)
